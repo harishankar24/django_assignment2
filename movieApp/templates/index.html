@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Movie List</title>
+        <style>
+            table{
+                text-align: center;
+            }
+            th,td{
+                padding: 2px 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Movie List</h1>
+        <table border="2">
+            <thead>
+                <th>ID</th>
+                <th>Movie Title</th>
+                <th>Release Date</th>
+                <th>Rating</th>
+            </thead>
+            {% for movie in movies %}
+                <tr>
+                    <td>{{ movie.id }}</td>
+                    <td>{{ movie.title }}</td>
+                    <td>{{ movie.releaseDate }}</td>
+                    <td>{{ movie.rating }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
