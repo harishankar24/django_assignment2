@@ -20,4 +20,5 @@ from movieApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.movieList, name='movieList'),
+    path('addMovie/', views.addMovie, name='addMovie'),
 ]

@@ -1,0 +1,8 @@
+<body>
+    <h1>Add Movie</h1>
+    <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Add</button>
+    </form>
+</body>
