@@ -1,8 +1,15 @@
-from django import forms
+from django.forms import ModelForm, DateInput
 from .models import Movie
 
 
-class MovieForm(forms.ModelForm):
+class DateInput(DateInput):
+    input_type = 'date'
+
+
+class MovieForm(ModelForm):
     class Meta:
         model = Movie
-        fields = '__all__'
+        fields = ['title', 'releaseDate', 'rating']
+        widgets = {
+            'releaseDate': DateInput,
+        }
